@@ -48,3 +48,10 @@ h2 {
 		box-shadow: 0px 10px 18px #1a181a;
 }
 
+    
+.infowindow {
+    font-size:12px;
+    color: #000000;
+    background-color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+}

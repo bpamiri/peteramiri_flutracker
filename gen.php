@@ -7,7 +7,7 @@ while ($row = mysql_fetch_assoc($result)) {
     echo '</br>';
 }
 
-/*
+/* 
 $result = mysql_query("SELECT user_name, tweet_text, latitude, longitude, tweet_date FROM flu_tweets WHERE 1");
 while ($row = mysql_fetch_assoc($result)) {
     echo $row["user_name"];

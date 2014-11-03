@@ -3,10 +3,10 @@
 ***	import CONFIG MySQL user/pass/db_name	***
 ***   to set or change edit: db-config.php  ***
 ***********************************************/
-$db_user="********";
-$db_pass="**********************";
-$db_name = '********************';
-$correct_secret_word = "*********************";
+$db_user="amiri";
+$db_pass="ItsGerr8!";
+$db_name = 'flutracker';
+$correct_secret_word = "built4us";
 /**********************************************
 ***					END OF					***
 *** import CONFIG MySQL user/pass/db_name	***

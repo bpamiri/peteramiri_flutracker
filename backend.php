@@ -43,6 +43,7 @@ do {
 
 
 
+  echo "<br />";
   echo "api_url:$api_URL<br />";
   echo "api_query:$API_query<br />";
 
@@ -53,9 +54,11 @@ do {
   //curl_setopt($ch, CURLOPT_CAINFO, "/etc/ssl/certs/ca-certificates.crt");
 
   include('oauth.php');
+  
   $result = mysql_query("SELECT bearer_token FROM flu_engine");
   $field = mysql_fetch_array($result);
-  $bearer = $field['bearer_token'];
+//  $bearer = $field['bearer_token'];
+  $bearer = $token;
   
   $headers = array( 
     "Authorization: Bearer $bearer"
@@ -64,7 +67,7 @@ do {
   curl_setopt($ch, CURLOPT_URL, "$api_URL"."$API_query");
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_USERAGENT, " **************** / mailto:************** ");
+  curl_setopt($ch, CURLOPT_USERAGENT, " flutracker.amiri.net Application / mailto:peter@alurium.com ");
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
   $data = curl_exec($ch);
   $info = curl_getinfo($ch); 
@@ -294,7 +297,7 @@ function lookup($string){
 }
  
 //Just before exit do the JSON magic
- include('gennhtriajson.php');
+ include('genjson.php');
 
 //close the database connection
 	mysql_close($link);
